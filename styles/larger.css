@@ -1,4 +1,3 @@
-/* Desktop Navigation */
 #hamburger {
     display: none;
 }
@@ -15,15 +14,12 @@ nav a {
     padding: 1rem 1.5rem;
 }
 
-/* TOP ROW: About Me (Wide) | Photo (Narrow) */
 .top-row {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    /* 2/3 width to 1/3 width */
     gap: 2rem;
 }
 
-/* COURSE SECTION: Full Width Below */
 .courses-section {
     width: 100%;
 }
@@ -35,10 +31,8 @@ nav a {
 
 .filter-buttons button {
     width: 200px;
-    /* Make buttons uniform width */
 }
 
-/* COURSE CARDS: 3 Across */
 #course-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

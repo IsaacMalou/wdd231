@@ -7,10 +7,12 @@
     --ss-yellow: #FCDD09;
     --ss-white: #FFFFFF;
 
-    /* Layout Colors */
+    /* Layout & Border Colors */
     --bg-light: #F4F4F4;
     --card-bg: #EAEAEA;
     --text-main: #333333;
+    --border-color: #CCCCCC;
+    --transparent: transparent;
 }
 
 body {
@@ -21,7 +23,6 @@ body {
     color: var(--text-main);
 }
 
-/* HEADER */
 header {
     background-color: var(--ss-white);
     color: var(--ss-black);
@@ -41,13 +42,12 @@ header {
 
 #hamburger {
     font-size: 2rem;
-    background: none;
+    background: var(--transparent);
     border: none;
     color: var(--ss-black);
     cursor: pointer;
 }
 
-/* NAVIGATION (Solid Dark Bar) */
 nav {
     background-color: var(--ss-black);
 }
@@ -70,7 +70,7 @@ nav a {
     text-decoration: none;
     padding: 1rem;
     text-align: center;
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid var(--text-main);
 }
 
 nav a:hover {
@@ -81,7 +81,6 @@ nav a.active {
     background-color: var(--ss-blue);
 }
 
-/* MAIN CONTENT */
 main {
     padding: 1rem;
     max-width: 1000px;
@@ -92,11 +91,10 @@ h1 {
     margin-left: 0.5rem;
 }
 
-/* CARDS (Matching Wireframe) */
 .card {
     background-color: var(--card-bg);
     margin-bottom: 1.5rem;
-    border: 1px solid #ccc;
+    border: 1px solid var(--border-color);
 }
 
 .card h2 {
@@ -119,11 +117,9 @@ img {
     margin: 0 auto;
 }
 
-/* COURSES & FILTERS */
 .filter-buttons {
     display: flex;
     flex-direction: column;
-    /* Stacked on mobile */
     gap: 10px;
     margin-bottom: 1rem;
 }
@@ -131,7 +127,7 @@ img {
 .filter-buttons button {
     padding: 0.5rem;
     border: 1px solid var(--ss-black);
-    background-color: transparent;
+    background-color: var(--transparent);
     color: var(--ss-black);
     cursor: pointer;
     font-weight: bold;
@@ -154,11 +150,10 @@ img {
     font-weight: bold;
 }
 
-/* Flag Colors for Course Completion */
 .completed {
     background-color: var(--ss-green);
     color: var(--ss-white);
-    border: 1px solid darkgreen;
+    border: 1px solid var(--ss-green);
 }
 
 .uncompleted {
@@ -173,10 +168,8 @@ img {
     margin-top: 1.5rem;
 }
 
-/* FOOTER */
 footer {
     background-color: var(--card-bg);
-    /* Wireframe shows light footer */
     color: var(--ss-black);
     text-align: center;
     padding: 2rem;
@@ -190,7 +183,6 @@ footer {
     gap: 15px;
 }
 
-/* Change SVGs to Black since footer is light */
 .socials svg {
     fill: var(--ss-black);
 }

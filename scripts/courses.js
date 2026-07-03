@@ -17,7 +17,6 @@ function displayCourses(courseList) {
         const courseCard = document.createElement('div');
         courseCard.classList.add('course-card');
 
-        // CSS class toggle
         if (course.completed) {
             courseCard.classList.add('completed');
         } else {
@@ -28,15 +27,12 @@ function displayCourses(courseList) {
         courseContainer.appendChild(courseCard);
     });
 
-    // Reduce function to calculate total credits
     const totalCredits = courseList.reduce((acc, course) => acc + course.credits, 0);
     totalCreditsEl.textContent = totalCredits;
 }
 
-// Button Event Listeners
 document.getElementById('btn-all').addEventListener('click', () => displayCourses(courses));
 document.getElementById('btn-cse').addEventListener('click', () => displayCourses(courses.filter(c => c.subject === 'CSE')));
 document.getElementById('btn-wdd').addEventListener('click', () => displayCourses(courses.filter(c => c.subject === 'WDD')));
 
-// Initial display
 displayCourses(courses);
