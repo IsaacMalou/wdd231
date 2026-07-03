@@ -1,0 +1,204 @@
+:root {
+    /* South Sudan Flag Palette */
+    --ss-black: #000000;
+    --ss-red: #DA121A;
+    --ss-green: #078930;
+    --ss-blue: #0F47AF;
+    --ss-yellow: #FCDD09;
+    --ss-white: #FFFFFF;
+
+    /* Layout Colors */
+    --bg-light: #F4F4F4;
+    --card-bg: #EAEAEA;
+    --text-main: #333333;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--ss-white);
+    color: var(--text-main);
+}
+
+/* HEADER */
+header {
+    background-color: var(--ss-white);
+    color: var(--ss-black);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.logo-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#hamburger {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: var(--ss-black);
+    cursor: pointer;
+}
+
+/* NAVIGATION (Solid Dark Bar) */
+nav {
+    background-color: var(--ss-black);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+    flex-direction: column;
+}
+
+nav ul.open {
+    display: flex;
+}
+
+nav a {
+    display: block;
+    color: var(--ss-white);
+    text-decoration: none;
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid #333;
+}
+
+nav a:hover {
+    background-color: var(--ss-red);
+}
+
+nav a.active {
+    background-color: var(--ss-blue);
+}
+
+/* MAIN CONTENT */
+main {
+    padding: 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+h1 {
+    margin-left: 0.5rem;
+}
+
+/* CARDS (Matching Wireframe) */
+.card {
+    background-color: var(--card-bg);
+    margin-bottom: 1.5rem;
+    border: 1px solid #ccc;
+}
+
+.card h2 {
+    background-color: var(--ss-black);
+    color: var(--ss-white);
+    padding: 0.75rem;
+    margin: 0;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* COURSES & FILTERS */
+.filter-buttons {
+    display: flex;
+    flex-direction: column;
+    /* Stacked on mobile */
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+
+.filter-buttons button {
+    padding: 0.5rem;
+    border: 1px solid var(--ss-black);
+    background-color: transparent;
+    color: var(--ss-black);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.filter-buttons button:hover,
+.filter-buttons button:active {
+    background-color: var(--ss-yellow);
+}
+
+#course-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.course-card {
+    padding: 1rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Flag Colors for Course Completion */
+.completed {
+    background-color: var(--ss-green);
+    color: var(--ss-white);
+    border: 1px solid darkgreen;
+}
+
+.uncompleted {
+    background-color: var(--card-bg);
+    color: var(--ss-black);
+    border: 1px dashed var(--ss-red);
+}
+
+.credits-total {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 1.5rem;
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--card-bg);
+    /* Wireframe shows light footer */
+    color: var(--ss-black);
+    text-align: center;
+    padding: 2rem;
+    border-top: 5px solid var(--ss-black);
+}
+
+.socials {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Change SVGs to Black since footer is light */
+.socials svg {
+    fill: var(--ss-black);
+}
+
+.socials a {
+    transition: transform 0.2s;
+}
+
+.socials a:hover {
+    transform: scale(1.1);
+}
