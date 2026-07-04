@@ -12,7 +12,6 @@
     --card-bg: #EAEAEA;
     --text-main: #333333;
     --border-color: #CCCCCC;
-    --transparent-bg: rgba(0, 0, 0, 0);
 }
 
 body {
@@ -42,7 +41,7 @@ header {
 
 #hamburger {
     font-size: 2rem;
-    background-color: var(--transparent-bg);
+    background-color: transparent;
     border: none;
     color: var(--ss-black);
     cursor: pointer;
@@ -70,7 +69,9 @@ nav a {
     text-decoration: none;
     padding: 1rem;
     text-align: center;
-    border-bottom: 1px solid var(--border-color);
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: var(--border-color);
 }
 
 nav a:hover {
@@ -94,7 +95,9 @@ h1 {
 .card {
     background-color: var(--card-bg);
     margin-bottom: 1.5rem;
-    border: 1px solid var(--border-color);
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--border-color);
 }
 
 .card h2 {
@@ -126,8 +129,10 @@ img {
 
 .filter-buttons button {
     padding: 0.5rem;
-    border: 1px solid var(--ss-black);
-    background-color: var(--transparent-bg);
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--ss-black);
+    background-color: transparent;
     color: var(--ss-black);
     cursor: pointer;
     font-weight: bold;
@@ -153,13 +158,17 @@ img {
 .completed {
     background-color: var(--ss-green);
     color: var(--ss-white);
-    border: 1px solid var(--ss-green);
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--ss-green);
 }
 
 .uncompleted {
     background-color: var(--card-bg);
     color: var(--ss-black);
-    border: 1px dashed var(--ss-red);
+    border-width: 1px;
+    border-style: dashed;
+    border-color: var(--ss-red);
 }
 
 .credits-total {
@@ -173,7 +182,9 @@ footer {
     color: var(--ss-black);
     text-align: center;
     padding: 2rem;
-    border-top: 5px solid var(--ss-black);
+    border-top-width: 5px;
+    border-top-style: solid;
+    border-top-color: var(--ss-black);
 }
 
 .socials {
@@ -183,12 +194,14 @@ footer {
     gap: 15px;
 }
 
+
 .socials svg {
-    fill: var(--ss-black);
+    fill: currentColor;
 }
 
 .socials a {
     transition: transform 0.2s;
+    color: var(--ss-black);
 }
 
 .socials a:hover {
