@@ -12,8 +12,6 @@
     --card-bg: #EAEAEA;
     --text-main: #333333;
     --border-color: #CCCCCC;
-
-    /* Strict Hex for transparent to pass validation */
     --transparent-bg: #00000000;
 }
 
