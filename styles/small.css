@@ -12,7 +12,7 @@
     --card-bg: #EAEAEA;
     --text-main: #333333;
     --border-color: #CCCCCC;
-    --transparent-bg: #00000000;
+    --transparent-bg: rgba(0, 0, 0, 0);
 }
 
 body {
