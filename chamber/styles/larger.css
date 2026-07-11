@@ -1,0 +1,143 @@
+@media (min-width: 768px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        /* Pushes Logo to left, Controls to right */
+        align-items: center;
+        padding: 1rem 3rem;
+    }
+
+    .header-right-controls {
+        width: auto;
+        gap: 2rem;
+        /* Space between Nav and Dark Mode Toggle */
+    }
+
+    #hamburger-menu {
+        display: none;
+    }
+
+    /* Target toggle to exact top right corner of the flow */
+    #dark-mode-toggle {
+        margin-left: 0;
+    }
+
+    nav {
+        display: block !important;
+        position: static;
+        width: auto;
+        background: transparent;
+        border: none;
+        margin-top: 0;
+    }
+
+    .menu-list {
+        flex-direction: row;
+        gap: 1.5rem;
+    }
+
+    .menu-list li a {
+        border-bottom: none;
+        padding: 0.5rem;
+    }
+
+    .menu-list li a:hover {
+        border-bottom: 2px solid var(--color-secondary);
+    }
+
+    /* Target Matrix Grid Layout Presentation Structure */
+    .grid-layout {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    .grid-layout .card-body {
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+    }
+
+    .grid-layout .image-placeholder {
+        flex-shrink: 0;
+        width: 110px;
+        height: auto;
+    }
+
+    /* Target Row List Layout Presentation Rules */
+    .list-layout .member-card {
+        border-radius: 0;
+        border: none;
+        border-bottom: 1px solid var(--border-color);
+        box-shadow: none;
+    }
+
+    .list-layout .card-header {
+        display: none;
+    }
+
+    .list-layout .card-body {
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+        padding: 1rem;
+        text-align: left;
+        align-items: center;
+    }
+
+    .list-layout .card-body::before {
+        content: attr(data-name);
+        font-weight: 700;
+        font-size: 1.1rem;
+        color: var(--color-primary);
+    }
+
+    body.dark-theme .list-layout .card-body::before {
+        color: var(--color-secondary);
+    }
+
+    .list-layout .image-placeholder {
+        display: none;
+    }
+
+    .list-layout .card-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        gap: 1rem;
+    }
+
+    .list-layout .card-info p {
+        margin: 0;
+    }
+
+    /* Desktop Striping Rules Injection */
+    .list-layout .member-card:nth-child(even) {
+        background-color: rgba(0, 0, 0, 0.03);
+    }
+
+    body.dark-theme .list-layout .member-card:nth-child(even) {
+        background-color: rgba(255, 255, 255, 0.03);
+    }
+
+    /* 3-Column Footer Layout */
+    footer {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 3rem;
+        text-align: left;
+    }
+
+    .footer-column {
+        flex: 1;
+    }
+
+    .footer-social {
+        text-align: center;
+    }
+
+    .footer-dev {
+        text-align: right;
+    }
+}

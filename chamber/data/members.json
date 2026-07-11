@@ -1,0 +1,65 @@
+[
+    {
+        "name": "Matrix Tech Voucher System +211 929 337 669",
+        "address": "45 Airport Road, Juba",
+        "phone": "+211 929 337 669",
+        "website": "https://www.matrixtech.com",
+        "image": "matrix-tech.png",
+        "membershipLevel": 3,
+        "otherInfo": "Innovative network architecture and custom voucher systems."
+    },
+    {
+        "name": "Equatoria Graphics & Branding",
+        "address": "12 Market Street, Juba",
+        "phone": "+211 920 111 222",
+        "website": "https://www.equatoriagraphics.com",
+        "image": "equatoria-graphics.png",
+        "membershipLevel": 2,
+        "otherInfo": "High-quality physical production, custom apparel, and labels."
+    },
+    {
+        "name": "Claront Web Hosting",
+        "address": "Suite 4, Riverside Complex, Juba",
+        "phone": "+211 912 345 678",
+        "website": "https://www.claront.com",
+        "image": "claront-hosting.jpg",
+        "membershipLevel": 3,
+        "otherInfo": "Secure enterprise server configurations and hosting management."
+    },
+    {
+        "name": "Nile River Logistics",
+        "address": "88 Port Road, Juba",
+        "phone": "+211 955 444 333",
+        "website": "https://www.nilelogistics.com",
+        "image": "nile-logistics.jpg",
+        "membershipLevel": 1,
+        "otherInfo": "Regional supply chain, customs clearance, and transport."
+    },
+    {
+        "name": "BerryGurt Cafe",
+        "address": "Downtown Plaza, Juba",
+        "phone": "+211 977 888 999",
+        "website": "https://www.berrygurt.com",
+        "image": "berrygurt.png",
+        "membershipLevel": 1,
+        "otherInfo": "Fresh workspace environments, local coffee, and networking."
+    },
+    {
+        "name": "Juba Financial Services",
+        "address": "Bankers Row, Juba",
+        "phone": "+211 999 000 111",
+        "website": "https://www.jubafinancial.com",
+        "image": "juba-financial.jpg",
+        "membershipLevel": 2,
+        "otherInfo": "Micro-loans and corporate strategic development consulting."
+    },
+    {
+        "name": "OSINT Security Partners",
+        "address": "Tech Hub, Juba",
+        "phone": "+211 900 123 456",
+        "website": "https://www.osintpartners.com",
+        "image": "osint-security.png",
+        "membershipLevel": 3,
+        "otherInfo": "Data compliance audits and lawful public metadata intelligence."
+    }
+]

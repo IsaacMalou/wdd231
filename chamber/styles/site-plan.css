@@ -1,0 +1,161 @@
+/* --- CSS Reset & Variables --- */
+:root {
+    --primary-color: #0F47AF;
+    --secondary-color: #FCDD09;
+    --bg-color: #F4F4F4;
+    --text-color: #333333;
+    --white: #FFFFFF;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 0 1rem;
+}
+
+/* --- Typography & Headers --- */
+header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    border-bottom: 5px solid var(--secondary-color);
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+h3 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* --- Layout --- */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    margin-bottom: 2.5rem;
+}
+
+/* --- Lists & Content --- */
+p,
+ul {
+    margin-bottom: 1rem;
+}
+
+ul {
+    padding-left: 2rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+/* --- Persona Cards --- */
+.persona {
+    background-color: var(--bg-color);
+    border-left: 4px solid var(--primary-color);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 0 4px 4px 0;
+}
+
+.persona h4 {
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+/* --- Site Map Diagram --- */
+.sitemap-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+}
+
+.sitemap-diagram {
+    display: flex;
+    position: relative;
+    padding-top: 20px;
+}
+
+.sitemap-diagram::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 55px;
+    right: 55px;
+    height: 2px;
+    background-color: var(--text-color);
+}
+
+.sitemap-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px;
+    position: relative;
+}
+
+.sitemap-item::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    width: 2px;
+    height: 20px;
+    background-color: var(--text-color);
+}
+
+.sitemap-box {
+    width: 110px;
+    height: 70px;
+    border: 1px solid var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.9rem;
+    background-color: var(--white);
+    color: var(--text-color);
+    padding: 5px;
+}
+
+.sitemap-box.inactive {
+    border-color: #a0a0a0;
+    color: #a0a0a0;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 2rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #666;
+}
