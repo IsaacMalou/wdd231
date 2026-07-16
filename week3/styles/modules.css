@@ -1,0 +1,119 @@
+/* --- Base Variables & Reset --- */
+:root {
+    --primary-color: #0F47AF;
+    --background-color: #F4F4F4;
+    --text-color: #333333;
+    --white: #FFFFFF;
+    --border-color: #DDDDDD;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* --- Typography --- */
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 3px solid var(--primary-color);
+}
+
+h1 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #555555;
+    font-weight: normal;
+}
+
+/* --- Control Panel (Dropdown & Buttons) --- */
+.controls {
+    background-color: var(--white);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* Allows wrapping on smaller mobile screens */
+}
+
+label {
+    font-weight: bold;
+}
+
+select {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #0a327d;
+}
+
+/* --- Data Table --- */
+.roster-container {
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    /* Keeps the rounded corners intact with the table inside */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+thead th {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 1rem;
+}
+
+tbody td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Adds a subtle hover effect to table rows */
+tbody tr:hover {
+    background-color: #f9f9f9;
+}
