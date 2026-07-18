@@ -1,4 +1,4 @@
-/* Core Structural and Variables from Site Plan */
+/* Core Structural and Variables */
 :root {
     --bg-main: #F4F4F4;
     --bg-card: #FFFFFF;
@@ -15,7 +15,7 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
-/* Dark Theme Variant Rules */
+/* Dark Theme */
 body.dark-theme {
     --bg-main: #1a1a1a;
     --bg-card: #2a2a2a;
@@ -25,7 +25,7 @@ body.dark-theme {
     --border-color: #444444;
 }
 
-/* Header & Structural Component Styling */
+/* Header */
 header {
     background-color: var(--color-primary);
     color: #FFFFFF;
@@ -78,7 +78,7 @@ header {
     margin-left: auto;
 }
 
-/* Mobile Context-Specific Collapsible Navigation Rules */
+/* Navigation */
 nav {
     display: none;
     width: 100%;
@@ -117,7 +117,7 @@ nav.open {
     color: var(--color-secondary);
 }
 
-/* Layout Controller Configuration Bar */
+/* Main */
 main {
     padding: 1.5rem;
     max-width: 1200px;
@@ -134,38 +134,9 @@ body.dark-theme .page-title {
     color: var(--color-secondary);
 }
 
-.view-toggle-bar {
-    display: flex;
-    justify-content: center;
-    gap: 0.5rem;
-    margin-bottom: 2rem;
-}
-
-.toggle-btn {
-    padding: 0.5rem 1.5rem;
-    font-size: 1rem;
-    font-weight: 700;
-    background-color: var(--bg-card);
-    color: var(--text-main);
-    border: 1px solid var(--border-color);
-    cursor: pointer;
-}
-
-.toggle-btn.active-btn {
-    background-color: var(--color-primary);
-    color: #FFFFFF;
-    border-color: var(--color-primary);
-}
-
-/* Card Presentation Base Rules */
-.grid-layout,
-.list-layout {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.member-card {
+/* Cards */
+.member-card,
+.home-card {
     background-color: var(--bg-card);
     border: 1px solid var(--border-color);
     border-radius: 6px;
@@ -174,7 +145,7 @@ body.dark-theme .page-title {
 }
 
 .card-header {
-    background-color: rgba(15, 71, 175, 0.1);
+    background-color: rgba(15, 71, 175, 0.05);
     padding: 1rem;
     text-align: center;
     border-bottom: 1px solid var(--border-color);
@@ -194,13 +165,6 @@ body.dark-theme .card-header h2 {
     color: var(--color-secondary);
 }
 
-.business-tag {
-    font-size: 0.85rem;
-    color: var(--text-main);
-    font-style: italic;
-    opacity: 0.8;
-}
-
 .card-body {
     padding: 1.5rem 1rem;
     display: flex;
@@ -210,37 +174,7 @@ body.dark-theme .card-header h2 {
     text-align: center;
 }
 
-.image-placeholder {
-    border: 1px solid var(--border-color);
-    background: #ffffff;
-    padding: 5px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 4px;
-}
-
-.image-placeholder img {
-    max-width: 100%;
-    height: auto;
-}
-
-.card-info p {
-    font-size: 0.95rem;
-    margin: 0.4rem 0;
-}
-
-.card-info a {
-    color: var(--color-primary);
-    text-decoration: none;
-    font-weight: 700;
-}
-
-body.dark-theme .card-info a {
-    color: var(--color-secondary);
-}
-
-/* Mobile Base Footer */
+/* Footer */
 footer {
     background-color: var(--color-primary);
     color: #FFFFFF;
@@ -257,39 +191,25 @@ footer {
     margin-bottom: 0.75rem;
 }
 
-.footer-column p {
-    margin: 0.25rem 0;
-    font-size: 0.95rem;
-}
-
-/* Social icons */
 .social-icon {
     width: 32px;
     height: 32px;
     margin: 0 0.5rem;
-    transition: transform 0.3s;
 }
 
-.social-icon:hover {
-    transform: scale(1.1);
-}
-
-/* --- Home Page Specifics --- */
+/* Hero */
 .hero {
     position: relative;
     border-radius: 6px;
     overflow: hidden;
     margin-bottom: 1.5rem;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
-/* Hero image*/
 .hero img {
     display: block;
     width: 100%;
     height: 400px;
     object-fit: cover;
-    object-position: center;
 }
 
 .cta-container {
@@ -329,47 +249,11 @@ body.dark-theme .cta-container h2 {
     border-radius: 4px;
 }
 
-.cta-button:hover {
-    background-color: var(--color-secondary);
-    color: var(--text-main);
-}
-
-/* Home Grid Layout (Mobile Stack) */
+/* Misc Home Elements */
 .home-grid {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-}
-
-.home-card {
-    background-color: var(--bg-card);
-    border: 1px solid var(--border-color);
-    border-radius: 6px;
-    overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-}
-
-.event-list p {
-    margin: 0.5rem 0;
-    font-size: 0.95rem;
-}
-
-.event-list hr {
-    border: 0;
-    border-top: 1px solid var(--border-color);
-    margin: 0.5rem 0;
-}
-
-.weather-body {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.current-weather {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 #current-temp {
@@ -388,29 +272,4 @@ body.dark-theme #current-temp {
     width: 100%;
     display: flex;
     justify-content: space-around;
-    text-align: center;
-}
-
-.forecast-container p {
-    margin: 0;
-    font-size: 0.9rem;
-}
-
-/* Spotlight Customization */
-.spotlight-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.spotlight-item {
-    border: 1px solid var(--border-color);
-    border-radius: 4px;
-    padding: 1rem;
-}
-
-.spotlight-level {
-    color: var(--color-secondary);
-    font-weight: 700;
-    margin-bottom: 0.5rem;
 }
