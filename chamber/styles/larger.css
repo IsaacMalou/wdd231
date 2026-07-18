@@ -2,7 +2,6 @@
     header {
         flex-direction: row;
         justify-content: space-between;
-        /* Pushes Logo to left, Controls to right */
         align-items: center;
         padding: 1rem 3rem;
     }
@@ -10,14 +9,12 @@
     .header-right-controls {
         width: auto;
         gap: 2rem;
-        /* Space between Nav and Dark Mode Toggle */
     }
 
     #hamburger-menu {
         display: none;
     }
 
-    /* Target toggle to exact top right corner of the flow */
     #dark-mode-toggle {
         margin-left: 0;
     }
@@ -140,4 +137,25 @@
     .footer-dev {
         text-align: right;
     }
+}
+
+/* --- Home Page Desktop Grid --- */
+.home-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    gap: 2rem;
+}
+
+.spotlights-section {
+    grid-column: 1 / -1;
+}
+
+.spotlight-grid {
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.spotlight-item {
+    flex: 1;
+    margin: 0 0.5rem;
 }

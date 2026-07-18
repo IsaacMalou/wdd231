@@ -1,15 +1,10 @@
 /* Core Structural and Variables from Site Plan */
 :root {
     --bg-main: #F4F4F4;
-    /* Light Gray Background */
     --bg-card: #FFFFFF;
-    /* Pure white for cards to contrast with background */
     --text-main: #333333;
-    /* Dark Gray/Black Text */
     --color-primary: #0F47AF;
-    /* Navy Blue */
     --color-secondary: #FCDD09;
-    /* Gold */
     --border-color: #cccccc;
 }
 
@@ -34,7 +29,6 @@ body.dark-theme {
 header {
     background-color: var(--color-primary);
     color: #FFFFFF;
-    /* Force white text on Navy Blue header */
     padding: 1rem;
     display: flex;
     flex-direction: column;
@@ -64,7 +58,6 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* Spreads hamburger and toggle in mobile view */
     width: 100%;
     position: relative;
 }
@@ -83,7 +76,6 @@ header {
 
 #dark-mode-toggle {
     margin-left: auto;
-    /* Pushes to the far right if flex space allows */
 }
 
 /* Mobile Context-Specific Collapsible Navigation Rules */
@@ -183,7 +175,6 @@ body.dark-theme .page-title {
 
 .card-header {
     background-color: rgba(15, 71, 175, 0.1);
-    /* Light tint of primary color */
     padding: 1rem;
     text-align: center;
     border-bottom: 1px solid var(--border-color);
@@ -222,7 +213,6 @@ body.dark-theme .card-header h2 {
 .image-placeholder {
     border: 1px solid var(--border-color);
     background: #ffffff;
-    /* keep logo bg white even in dark mode for visibility */
     padding: 5px;
     display: inline-flex;
     align-items: center;
@@ -272,14 +262,155 @@ footer {
     font-size: 0.95rem;
 }
 
+/* Social icons */
 .social-icon {
     width: 32px;
     height: 32px;
     margin: 0 0.5rem;
-    filter: brightness(0) invert(1);
-    /* Makes standard icons white */
+    transition: transform 0.3s;
 }
 
 .social-icon:hover {
-    filter: none;
+    transform: scale(1.1);
+}
+
+/* --- Home Page Specifics --- */
+.hero {
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Hero image*/
+.hero img {
+    display: block;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.cta-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 1.5rem;
+    border-radius: 6px;
+    text-align: center;
+    width: 85%;
+    max-width: 350px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-theme .cta-container {
+    background-color: rgba(42, 42, 42, 0.9);
+}
+
+.cta-container h2 {
+    color: var(--color-primary);
+    margin: 0 0 1rem 0;
+}
+
+body.dark-theme .cta-container h2 {
+    color: var(--color-secondary);
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--color-primary);
+    color: #FFFFFF;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 4px;
+}
+
+.cta-button:hover {
+    background-color: var(--color-secondary);
+    color: var(--text-main);
+}
+
+/* Home Grid Layout (Mobile Stack) */
+.home-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.home-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.event-list p {
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+}
+
+.event-list hr {
+    border: 0;
+    border-top: 1px solid var(--border-color);
+    margin: 0.5rem 0;
+}
+
+.weather-body {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.current-weather {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#current-temp {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+body.dark-theme #current-temp {
+    color: var(--color-secondary);
+}
+
+.forecast-container {
+    border-top: 1px solid var(--border-color);
+    padding-top: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.forecast-container p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Spotlight Customization */
+.spotlight-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.spotlight-item {
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 1rem;
+}
+
+.spotlight-level {
+    color: var(--color-secondary);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
 }

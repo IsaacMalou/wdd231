@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juba Chamber of Commerce - Home</title>
+    <meta name="description"
+        content="Welcome to the Juba Chamber of Commerce. Discover local businesses, networking events, and community growth opportunities.">
+    <meta name="author" content="Isaac Malou">
+
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- Open Graph Protocol -->
+    <meta property="og:title" content="Juba Chamber of Commerce - Home">
+    <meta property="og:description" content="Welcome to the Juba Chamber of Commerce. Grow your business with us.">
+    <meta property="og:image" content="images/chamber-logo.png">
+    <meta property="og:url" content="https://isaaxmatrix.github.io/wdd231/chamber/index.html">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts: Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- CSS Loading Sequence -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <!-- Specific script for the home page -->
+    <script src="scripts/home.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo-title">
+            <img src="images/chamber-logo.png" alt="Juba Chamber Logo" class="main-logo">
+            <span class="site-title">Juba Chamber of Commerce</span>
+        </div>
+        <div class="header-right-controls">
+            <button id="hamburger-menu" aria-label="Toggle site navigation menu">☰</button>
+            <nav id="primary-nav">
+                <ul class="menu-list">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="join.html">Join</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                </ul>
+            </nav>
+            <button id="dark-mode-toggle" aria-label="Toggle dark theme" title="Toggle Dark/Light Mode">🌓</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Image & Call to Action -->
+        <section class="hero">
+            <picture>
+                <source srcset="images/hero-large.png" media="(min-width: 800px)">
+                
+                <img src="images/hero-small.png" alt="Juba Business District" width="100%" loading="lazy">
+            </picture>
+            <div class="cta-container">
+                <h2>Empowering Juba's Economy</h2>
+                <a href="join.html" class="cta-button">Join the Chamber</a>
+            </div>
+        </section>
+
+        <!-- Dynamic Content Grid -->
+        <div class="home-grid">
+
+            <!-- Events Section -->
+            <section class="home-card current-events">
+                <div class="card-header">
+                    <h2>Current Events</h2>
+                </div>
+                <div class="card-body event-list">
+                    <p><strong>Oct 15:</strong> Tech Innovators Meetup</p>
+                    <hr>
+                    <p><strong>Oct 22:</strong> Graphic Design Workshop</p>
+                    <hr>
+                    <p><strong>Nov 01:</strong> Regional Trade Expo</p>
+                </div>
+            </section>
+
+            <!-- Weather API Section -->
+            <section class="home-card weather-section">
+                <div class="card-header">
+                    <h2>Juba Weather</h2>
+                </div>
+                <div class="card-body weather-body">
+                    <div class="current-weather">
+                        <img id="weather-icon" src="" alt="Weather Icon">
+                        <p><span id="current-temp">--</span>&deg;F</p>
+                        <p id="weather-desc" class="business-tag">--</p>
+                    </div>
+                    <div id="forecast" class="forecast-container">
+                    
+                    </div>
+                </div>
+            </section>
+
+            <!-- Spotlight API Section -->
+            <section class="home-card spotlights-section">
+                <div class="card-header">
+                    <h2>Member Spotlights</h2>
+                </div>
+                <div id="spotlight-container" class="spotlight-grid card-body">
+                    
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-column footer-contact">
+            <h3>Juba Chamber of Commerce</h3>
+            <p>123 Equatoria Way</p>
+            <p>Juba, Central Equatoria</p>
+            <p>info@jubachambercc.org</p>
+            <p>+211 929 337 669</p>
+        </div>
+        <div class="footer-column footer-social">
+            <a href="https://youtube.com" target="_blank" aria-label="YouTube Link"><img src="images/youtube-icon.svg"
+                    alt="YouTube Icon" class="social-icon"></a>
+            <a href="https://facebook.com" target="_blank" aria-label="Facebook Link"><img
+                    src="images/facebook-icon.svg" alt="Facebook Icon" class="social-icon"></a>
+            <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn Link"><img
+                    src="images/linkedin-icon.svg" alt="LinkedIn Icon" class="social-icon"></a>
+        </div>
+        <div class="footer-column footer-dev">
+            <p>WDD231 Class Project</p>
+            <p>Isaac Malou</p>
+            <p>&copy; <span id="currentyear"></span> Juba Chamber of Commerce</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+
+</html>
