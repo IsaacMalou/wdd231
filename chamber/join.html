@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juba Chamber of Commerce - Join</title>
+    <meta name="description" content="Apply for a membership with the Juba Chamber of Commerce.">
+    <meta name="author" content="Isaac Malou">
+
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <meta property="og:title" content="Join Juba Chamber of Commerce">
+    <meta property="og:description" content="Become a member to connect, grow, and strengthen your business presence.">
+    <meta property="og:image" content="https://isaacmatrix.github.io/wdd231/chamber/images/chamber-logo.png">
+    <meta property="og:url" content="https://isaacmatrix.github.io/wdd231/chamber/join.html">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <!-- Include a specific stylesheet for the form and cards -->
+    <link rel="stylesheet" href="styles/join.css">
+
+    <!-- Primary JS + specific Join JS -->
+    <script src="scripts/directory.js" defer></script>
+    <script src="scripts/join.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo-title">
+            <img src="images/chamber-logo.png" alt="Juba Chamber Logo" class="main-logo">
+            <span class="site-title">Juba Chamber of Commerce</span>
+        </div>
+        <div class="header-right-controls">
+            <button id="hamburger-menu" aria-label="Toggle site navigation menu" aria-expanded="false">☰</button>
+            <nav id="primary-nav">
+                <ul class="menu-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="join.html" class="active">Join</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                </ul>
+            </nav>
+            <button id="dark-mode-toggle" aria-label="Toggle dark theme" title="Toggle Dark/Light Mode">🌓</button>
+        </div>
+    </header>
+
+    <main class="join-main">
+        <h1 class="page-title">Membership Application</h1>
+
+        <div class="join-layout">
+            <!-- W04 Form Requirements -->
+            <form method="get" action="thankyou.html" class="membership-form">
+                <fieldset>
+                    <legend>Applicant Information</legend>
+                    <label>First Name*
+                        <input type="text" name="first_name" id="first_name" title="Enter your first name"
+                            autocomplete="given-name" required>
+                    </label>
+                    <label>Last Name*
+                        <input type="text" name="last_name" id="last_name" title="Enter your last name"
+                            autocomplete="family-name" required>
+                    </label>
+                    <label>Organizational Title
+                        <input type="text" name="org_title" id="org_title"
+                            title="Minimum 7 characters. Alpha characters, spaces, and hyphens only."
+                            autocomplete="organization-title" pattern="^[A-Za-z\s\-]{7,}$">
+                    </label>
+                    <label>Email Address*
+                        <input type="email" name="email" id="email" title="Enter a valid email address"
+                            autocomplete="email" placeholder="example@email.com" required>
+                    </label>
+                    <label>Mobile Phone*
+                        <input type="tel" name="phone" id="phone" title="Enter your mobile phone number"
+                            autocomplete="tel" required>
+                    </label>
+                    <label>Business/Organization Name*
+                        <input type="text" name="business_name" id="business_name"
+                            title="Enter your business or organization name" autocomplete="organization" required>
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Membership Level</legend>
+                    <label class="radio-label"><input type="radio" name="membership_level" value="np" required> NP
+                        Membership (Non-Profit - Free)</label>
+                    <label class="radio-label"><input type="radio" name="membership_level" value="bronze"> Bronze
+                        Membership</label>
+                    <label class="radio-label"><input type="radio" name="membership_level" value="silver"> Silver
+                        Membership</label>
+                    <label class="radio-label"><input type="radio" name="membership_level" value="gold"> Gold
+                        Membership</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Additional Information</legend>
+                    <label>Business Description
+                        <textarea name="business_description" id="business_description"
+                            title="Provide a brief description of your business" rows="4"></textarea>
+                    </label>
+                </fieldset>
+
+                <input type="hidden" name="timestamp" id="timestamp">
+                <button type="submit" class="submit-btn">Apply for Membership</button>
+            </form>
+
+            <!-- Animated Cards -->
+            <section class="membership-cards">
+                <div class="card np-card animate-card" style="animation-delay: 0.1s;">
+                    <h3>NP Membership</h3>
+                    <p>Free for non-profits.</p>
+                    <button class="modal-btn" data-modal="np-modal">View Benefits</button>
+                </div>
+                <div class="card bronze-card animate-card" style="animation-delay: 0.3s;">
+                    <h3>Bronze Membership</h3>
+                    <p>Great for small startups.</p>
+                    <button class="modal-btn" data-modal="bronze-modal">View Benefits</button>
+                </div>
+                <div class="card silver-card animate-card" style="animation-delay: 0.5s;">
+                    <h3>Silver Membership</h3>
+                    <p>Boost your regional reach.</p>
+                    <button class="modal-btn" data-modal="silver-modal">View Benefits</button>
+                </div>
+                <div class="card gold-card animate-card" style="animation-delay: 0.7s;">
+                    <h3>Gold Membership</h3>
+                    <p>Maximum visibility & perks.</p>
+                    <button class="modal-btn" data-modal="gold-modal">View Benefits</button>
+                </div>
+            </section>
+        </div>
+
+        <!-- HTML Dialog Modals -->
+        <dialog id="np-modal" class="benefits-modal">
+            <button class="close-modal" aria-label="Close modal">❌</button>
+            <h2>NP Membership Benefits</h2>
+            <ul>
+                <li>Free directory listing</li>
+                <li>Access to community events</li>
+                <li>Monthly newsletter</li>
+            </ul>
+        </dialog>
+        <dialog id="bronze-modal" class="benefits-modal">
+            <button class="close-modal" aria-label="Close modal">❌</button>
+            <h2>Bronze Membership Benefits</h2>
+            <ul>
+                <li>Basic directory listing</li>
+                <li>Discounted event tickets</li>
+                <li>Access to networking groups</li>
+            </ul>
+        </dialog>
+        <dialog id="silver-modal" class="benefits-modal">
+            <button class="close-modal" aria-label="Close modal">❌</button>
+            <h2>Silver Membership Benefits</h2>
+            <ul>
+                <li>Premium directory listing</li>
+                <li>Free booth at annual expo</li>
+                <li>Advertising discounts on site</li>
+                <li>Quarterly training webinars</li>
+            </ul>
+        </dialog>
+        <dialog id="gold-modal" class="benefits-modal">
+            <button class="close-modal" aria-label="Close modal">❌</button>
+            <h2>Gold Membership Benefits</h2>
+            <ul>
+                <li>Home page spotlight rotation</li>
+                <li>VIP seating at all chamber events</li>
+                <li>Dedicated account manager</li>
+                <li>Free digital marketing audits</li>
+            </ul>
+        </dialog>
+    </main>
+
+    <footer>
+        <div class="footer-column footer-contact">
+            <h3>Juba Chamber of Commerce</h3>
+            <p>123 Equatoria Way</p>
+            <p>Juba, Central Equatoria</p>
+            <p>info@jubachambercc.org</p>
+            <p>+211 929 337 669</p>
+        </div>
+        <div class="footer-column footer-social">
+            <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube Link"><img
+                    src="images/youtube-icon.svg" alt="YouTube Icon" class="social-icon"></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook Link"><img
+                    src="images/facebook-icon.svg" alt="Facebook Icon" class="social-icon"></a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn Link"><img
+                    src="images/linkedin-icon.svg" alt="LinkedIn Icon" class="social-icon"></a>
+        </div>
+        <div class="footer-column footer-dev">
+            <p>WDD231 Class Project</p>
+            <p>Isaac Malou</p>
+            <p>&copy; <span id="currentyear"></span> Juba Chamber of Commerce</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+
+</html>

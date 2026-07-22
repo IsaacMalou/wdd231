@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- (Keep WDD231 <head> the exact same as join.html, changing title to "Thank You") -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juba Chamber of Commerce - Thank You</title>
+    <meta name="description" content="Thank you for applying to the Juba Chamber of Commerce.">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/join.css">
+
+    <script src="scripts/directory.js" defer></script>
+    <script src="scripts/thankyou.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo-title">
+            <img src="images/chamber-logo.png" alt="Juba Chamber Logo" class="main-logo">
+            <span class="site-title">Juba Chamber of Commerce</span>
+        </div>
+        <div class="header-right-controls">
+            <button id="hamburger-menu" aria-label="Toggle site navigation menu" aria-expanded="false">☰</button>
+            <nav id="primary-nav">
+                <ul class="menu-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="join.html">Join</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                </ul>
+            </nav>
+            <button id="dark-mode-toggle" aria-label="Toggle dark theme" title="Toggle Dark/Light Mode">🌓</button>
+        </div>
+    </header>
+
+    <main class="join-main">
+        <h1 class="page-title">Thank You For Your Application!</h1>
+        <div class="membership-form">
+            <h2>Application Summary</h2>
+            <p>Your details have been securely recorded. Please review your submitted data below:</p>
+
+            <div id="results-summary">
+                <!-- Javascript will inject URL parameters here -->
+            </div>
+        </div>
+    </main>
+
+    <!-- (Keep WDD231 <footer> exactly the same as join.html) -->
+    <footer>
+        <div class="footer-column footer-dev">
+            <p>WDD231 Class Project</p>
+            <p>Isaac Malou</p>
+            <p>&copy; <span id="currentyear"></span> Juba Chamber of Commerce</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+
+</html>
