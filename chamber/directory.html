@@ -14,7 +14,7 @@
     <meta property="og:title" content="Juba Chamber of Commerce - Directory">
     <meta property="og:description"
         content="Explore local qualified businesses and community frameworks inside our official chamber directory.">
-    <meta property="og:image" content="images/chamber-logo.png">
+    <meta property="og:image" content="https://isaacmatrix.github.io/wdd231/chamber/images/chamber-logo.png">
     <meta property="og:url" content="https://isaacmatrix.github.io/wdd231/chamber/directory.html">
     <meta property="og:type" content="website">
 
@@ -38,7 +38,7 @@
             <span class="site-title">Juba Chamber of Commerce</span>
         </div>
         <div class="header-right-controls">
-            <button id="hamburger-menu" aria-label="Toggle site navigation menu">☰</button>
+            <button id="hamburger-menu" aria-label="Toggle site navigation menu" aria-expanded="false">☰</button>
             <nav id="primary-nav">
                 <ul class="menu-list">
                     <li><a href="index.html">Home</a></li>
@@ -59,7 +59,7 @@
             <button id="list-view" class="toggle-btn">List</button>
         </div>
 
-        <article id="directory-container" class="grid-layout"></article>
+        <div id="directory-container" class="grid-layout"></div>
     </main>
 
     <footer>
@@ -71,11 +71,11 @@
             <p>+211 929 337 669</p>
         </div>
         <div class="footer-column footer-social">
-            <a href="https://youtube.com" target="_blank" aria-label="YouTube Link"><img src="images/youtube-icon.svg"
-                    alt="YouTube Icon" class="social-icon"></a>
-            <a href="https://facebook.com" target="_blank" aria-label="Facebook Link"><img
+            <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube Link"><img
+                    src="images/youtube-icon.svg" alt="YouTube Icon" class="social-icon"></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook Link"><img
                     src="images/facebook-icon.svg" alt="Facebook Icon" class="social-icon"></a>
-            <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn Link"><img
+            <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn Link"><img
                     src="images/linkedin-icon.svg" alt="LinkedIn Icon" class="social-icon"></a>
         </div>
         <div class="footer-column footer-dev">
