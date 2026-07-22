@@ -251,9 +251,8 @@ body.dark-theme .cta-container h2 {
 
 /* Misc Home Elements */
 .home-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+    display: grid;
+    gap: 2rem;
 }
 
 #current-temp {

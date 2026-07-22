@@ -22,10 +22,8 @@
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
-    <!-- Include a specific stylesheet for the form and cards -->
     <link rel="stylesheet" href="styles/join.css">
 
-    <!-- Primary JS + specific Join JS -->
     <script src="scripts/directory.js" defer></script>
     <script src="scripts/join.js" defer></script>
 </head>
@@ -54,7 +52,6 @@
         <h1 class="page-title">Membership Application</h1>
 
         <div class="join-layout">
-            <!-- W04 Form Requirements -->
             <form method="get" action="thankyou.html" class="membership-form">
                 <fieldset>
                     <legend>Applicant Information</legend>
@@ -109,32 +106,30 @@
                 <button type="submit" class="submit-btn">Apply for Membership</button>
             </form>
 
-            <!-- Animated Cards -->
             <section class="membership-cards">
-                <div class="card np-card animate-card" style="animation-delay: 0.1s;">
-                    <h3>NP Membership</h3>
+                <div class="card np-card animate-card">
+                    <h2>NP Membership</h2>
                     <p>Free for non-profits.</p>
                     <button class="modal-btn" data-modal="np-modal">View Benefits</button>
                 </div>
-                <div class="card bronze-card animate-card" style="animation-delay: 0.3s;">
-                    <h3>Bronze Membership</h3>
+                <div class="card bronze-card animate-card">
+                    <h2>Bronze Membership</h2>
                     <p>Great for small startups.</p>
                     <button class="modal-btn" data-modal="bronze-modal">View Benefits</button>
                 </div>
-                <div class="card silver-card animate-card" style="animation-delay: 0.5s;">
-                    <h3>Silver Membership</h3>
+                <div class="card silver-card animate-card">
+                    <h2>Silver Membership</h2>
                     <p>Boost your regional reach.</p>
                     <button class="modal-btn" data-modal="silver-modal">View Benefits</button>
                 </div>
-                <div class="card gold-card animate-card" style="animation-delay: 0.7s;">
-                    <h3>Gold Membership</h3>
+                <div class="card gold-card animate-card">
+                    <h2>Gold Membership</h2>
                     <p>Maximum visibility & perks.</p>
                     <button class="modal-btn" data-modal="gold-modal">View Benefits</button>
                 </div>
             </section>
         </div>
 
-        <!-- HTML Dialog Modals -->
         <dialog id="np-modal" class="benefits-modal">
             <button class="close-modal" aria-label="Close modal">❌</button>
             <h2>NP Membership Benefits</h2>

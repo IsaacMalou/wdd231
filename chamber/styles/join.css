@@ -8,7 +8,6 @@
 .join-layout {
     display: flex;
     flex-direction: column;
-    /* Small screens: form top, cards bottom */
     gap: 2rem;
 }
 
@@ -108,7 +107,6 @@ body.dark-theme .membership-form legend {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     text-align: center;
     opacity: 0;
-    /* Start hidden for animation */
 }
 
 body.dark-theme .card {
@@ -116,9 +114,25 @@ body.dark-theme .card {
     border-color: #444;
 }
 
-/* W04 Initial Page Load Animation */
 .animate-card {
     animation: slideUpFade 0.6s ease-out forwards;
+}
+
+/* Extracted Inline Animation Delays */
+.np-card {
+    animation-delay: 0.1s;
+}
+
+.bronze-card {
+    animation-delay: 0.3s;
+}
+
+.silver-card {
+    animation-delay: 0.5s;
+}
+
+.gold-card {
+    animation-delay: 0.7s;
 }
 
 @keyframes slideUpFade {
@@ -188,7 +202,6 @@ body.dark-theme .benefits-modal {
     .join-layout {
         display: grid;
         grid-template-columns: 2fr 1fr;
-        /* Form left, cards right */
         align-items: start;
     }
 }
