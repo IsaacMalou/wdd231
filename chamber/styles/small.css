@@ -20,8 +20,8 @@ body.dark-theme {
     --bg-main: #1a1a1a;
     --bg-card: #2a2a2a;
     --text-main: #f4f4f4;
-    --color-primary: #2b67d8;
-    --color-secondary: #d4ba06;
+    --color-primary: #1a4594;
+    --color-secondary: #e6ca07;
     --border-color: #444444;
 }
 
@@ -72,6 +72,12 @@ header {
     cursor: pointer;
     border-radius: 4px;
     font-weight: bold;
+}
+
+
+body.dark-theme #dark-mode-toggle,
+body.dark-theme #hamburger-menu {
+    color: #1a1a1a;
 }
 
 #dark-mode-toggle {

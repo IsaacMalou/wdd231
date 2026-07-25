@@ -137,25 +137,23 @@
     .footer-dev {
         text-align: right;
     }
-}
 
-/* --- Home Page Desktop Grid --- */
-.home-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 2fr;
-    gap: 2rem;
-}
+    /* --- Home Page Desktop Grid --- */
+    .home-grid {
+        grid-template-columns: 1fr 1fr 2fr;
+    }
 
-.spotlights-section {
-    grid-column: 1 / -1;
-}
+    .spotlights-section {
+        grid-column: 1 / -1;
+    }
 
-.spotlight-grid {
-    flex-direction: row;
-    justify-content: space-around;
-}
+    .spotlight-grid {
+        flex-direction: row;
+        justify-content: space-around;
+    }
 
-.spotlight-item {
-    flex: 1;
-    margin: 0 0.5rem;
+    .spotlight-item {
+        flex: 1;
+        margin: 0 0.5rem;
+    }
 }

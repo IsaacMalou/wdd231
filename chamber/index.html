@@ -10,6 +10,7 @@
     <meta name="author" content="Isaac Malou">
 
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <meta name="theme-color" content="#ffffff">
 
     <!-- Open Graph Protocol -->
     <meta property="og:title" content="Juba Chamber of Commerce - Home">
@@ -35,7 +36,7 @@
 <body>
     <header>
         <div class="logo-title">
-            <img src="images/chamber-logo.png" alt="Juba Chamber Logo" class="main-logo">
+            <img src="images/chamber-logo.png" alt="Juba Chamber Logo" class="main-logo" width="80" height="80">
             <span class="site-title">Juba Chamber of Commerce</span>
         </div>
         <div class="header-right-controls">
@@ -59,7 +60,7 @@
         <section class="hero">
             <picture>
                 <source srcset="images/hero-large.png" media="(min-width: 800px)">
-                <img src="images/hero-small.png" alt="Juba Business District" width="100%" loading="lazy">
+                <img src="images/hero-small.png" alt="Juba Business District" width="800" height="400" loading="lazy">
             </picture>
             <div class="cta-container">
                 <h2>Empowering Juba's Economy</h2>
@@ -88,7 +89,8 @@
                 </div>
                 <div class="card-body weather-body">
                     <div class="current-weather">
-                        <img id="weather-icon" src="" alt="Weather Icon">
+                        <img id="weather-icon" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                            alt="Weather Icon" width="50" height="50">
                         <p><span id="current-temp">--</span>&deg;F</p>
                         <p id="weather-desc" class="business-tag">--</p>
                     </div>
@@ -114,12 +116,15 @@
             <p>+211 929 337 669</p>
         </div>
         <div class="footer-column footer-social">
-            <a href="https://youtube.com" target="_blank" aria-label="YouTube Link"><img src="images/youtube-icon.svg"
-                    alt="YouTube Icon" class="social-icon"></a>
-            <a href="https://facebook.com" target="_blank" aria-label="Facebook Link"><img
-                    src="images/facebook-icon.svg" alt="Facebook Icon" class="social-icon"></a>
-            <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn Link"><img
-                    src="images/linkedin-icon.svg" alt="LinkedIn Icon" class="social-icon"></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube Link">
+                <img src="images/youtube-icon.svg" alt="YouTube Icon" class="social-icon" width="30" height="30">
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook Link">
+                <img src="images/facebook-icon.svg" alt="Facebook Icon" class="social-icon" width="30" height="30">
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn Link">
+                <img src="images/linkedin-icon.svg" alt="LinkedIn Icon" class="social-icon" width="30" height="30">
+            </a>
         </div>
         <div class="footer-column footer-dev">
             <p>WDD231 Class Project</p>
