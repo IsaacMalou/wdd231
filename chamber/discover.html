@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juba Chamber of Commerce - Discover</title>
+    <meta name="description"
+        content="Discover the vibrant city of Juba, South Sudan. Explore local businesses, landmarks, and culture.">
+    <meta name="author" content="Isaac Malou">
+
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/discover.css">
+
+    <script src="scripts/directory.js" defer></script>
+    <script type="module" src="scripts/discover.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo-title">
+            <img src="images/chamber-logo.png" alt="Juba Chamber Logo" class="main-logo" width="80" height="80">
+            <span class="site-title">Juba Chamber of Commerce</span>
+        </div>
+        <div class="header-right-controls">
+            <button id="hamburger-menu" aria-label="Toggle site navigation menu">☰</button>
+            <nav id="primary-nav">
+                <ul class="menu-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="join.html">Join</a></li>
+                    <li><a href="discover.html" class="active">Discover</a></li>
+                </ul>
+            </nav>
+            <button id="dark-mode-toggle" aria-label="Toggle dark theme" title="Toggle Dark/Light Mode">🌓</button>
+        </div>
+    </header>
+
+    <main class="discover-main">
+        <h1 class="page-title">Discover Juba</h1>
+
+        <!-- LocalStorage Message Appears Here -->
+        <div id="visit-message" class="visit-banner"></div>
+
+        <div id="discover-grid" class="discover-layout">
+            <!-- Cards will be injected here by discover.js -->
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-column footer-contact">
+            <h3>Juba Chamber of Commerce</h3>
+            <p>123 Equatoria Way</p>
+            <p>Juba, Central Equatoria</p>
+            <p>info@jubachambercc.org</p>
+            <p>+211 929 337 669</p>
+        </div>
+        <div class="footer-column footer-social">
+            <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube Link">
+                <img src="images/youtube-icon.svg" alt="YouTube Icon" class="social-icon" width="30" height="30">
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook Link">
+                <img src="images/facebook-icon.svg" alt="Facebook Icon" class="social-icon" width="30" height="30">
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn Link">
+                <img src="images/linkedin-icon.svg" alt="LinkedIn Icon" class="social-icon" width="30" height="30">
+            </a>
+        </div>
+        <div class="footer-column footer-dev">
+            <p>WDD231 Class Project</p>
+            <p>Isaac Malou</p>
+            <p>&copy; <span id="currentyear"></span> Juba Chamber of Commerce</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+
+</html>
