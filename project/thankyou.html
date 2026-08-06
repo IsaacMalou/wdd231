@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submission Received | Matrix Tech</title>
+    <meta name="description" content="Thank you for contacting Matrix Tech. Your message has been received.">
+
+    <!-- Branding -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Core Stylesheets -->
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <!-- Interactive Scripts -->
+    <script type="module" src="scripts/utils.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="header-container">
+            <div class="logo-box">
+                <a href="index.html">
+                    <img src="images/matrix-logo.png" alt="Matrix Tech Logo" class="site-logo" width="80" height="80">
+                </a>
+                <div class="brand-text">
+                    <span class="brand-name">Matrix Tech</span>
+                </div>
+            </div>
+
+            <div class="header-controls">
+                <button id="theme-toggle" aria-label="Toggle Dark Mode" class="icon-btn">🌙</button>
+            </div>
+
+            <nav id="primary-nav">
+                <ul class="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services & Tech</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" style="padding: 3rem 1.25rem;">
+            <div class="hero-content">
+                <h1>Thank You For Reaching Out!</h1>
+                <p>We have received your request and our team will get back to you shortly.</p>
+            </div>
+        </section>
+
+        <!-- Submitted Data Display Box -->
+        <section class="features" style="max-width: 700px; margin: 3rem auto;">
+            <div
+                style="background-color: var(--bg-card); padding: 2.5rem; border-radius: 8px; border: 1px solid var(--border-color); box-shadow: var(--shadow);">
+                <h2
+                    style="font-size: 1.5rem; margin-bottom: 1.5rem; border-bottom: 2px solid var(--accent-color); padding-bottom: 0.5rem;">
+                    Submitted Request Details</h2>
+
+                <div id="results" style="display: flex; flex-direction: column; gap: 1rem; font-size: 1.05rem;">
+                    <!-- Populated dynamically via JavaScript below -->
+                </div>
+
+                <div style="margin-top: 2.5rem; text-align: center;">
+                    <a href="index.html" class="btn btn-primary"
+                        style="text-decoration: none; display: inline-block; padding: 0.75rem 1.5rem;">Return to
+                        Homepage</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Professional Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-col brand-col">
+                <p class="footer-brand"><strong>Matrix Tech</strong></p>
+                <p class="footer-bio">Bridging the gap between creative visual identity and robust network engineering
+                    across South Sudan.</p>
+            </div>
+
+            <div class="footer-col links-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="attributions.html">Resource Attributions</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col contact-col">
+                <h3>Get In Touch</h3>
+                <p>📍 Juba, Central Equatoria, SSD</p>
+                <p>📞 +211 929 337 669</p>
+                <p>✉️ matrixtechssd@gmail.com</p>
+            </div>
+        </div>
+
+        <div class="footer-legal">
+            <p>&copy; <span id="currentyear"></span> Isaac Malou | Matrix Tech | WDD 231 Final Project</p>
+            <p id="lastModified" class="mod-date"></p>
+        </div>
+    </footer>
+
+    <!-- Script to parse and display form GET parameters -->
+    <script>
+        const currentUrl = window.location.href;
+        const urlParams = new URLSearchParams(window.location.search);
+        const resultsContainer = document.getElementById('results');
+
+        if (urlParams.toString() === "") {
+            resultsContainer.innerHTML = "<p>No submission data found. Please fill out the contact form first.</p>";
+        } else {
+            const name = urlParams.get('fullname') || 'Not provided';
+            const email = urlParams.get('email') || 'Not provided';
+            const phone = urlParams.get('phone') || 'Not provided';
+            const service = urlParams.get('service') || 'Not provided';
+            const message = urlParams.get('message') || 'Not provided';
+
+            resultsContainer.innerHTML = `
+                <p><strong>Full Name:</strong> ${escapeHtml(name)}</p>
+                <p><strong>Email Address:</strong> ${escapeHtml(email)}</p>
+                <p><strong>Phone Number:</strong> ${escapeHtml(phone)}</p>
+                <p><strong>Service Requested:</strong> ${escapeHtml(service)}</p>
+                <p><strong>Message:</strong><br><span style="display: block; margin-top: 0.5rem; padding: 1rem; background-color: var(--bg-main); border-radius: 4px; border: 1px solid var(--border-color);">${escapeHtml(message)}</span></p>
+            `;
+        }
+
+        // Basic helper function to prevent injection when displaying user input
+        function escapeHtml(str) {
+            return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+        }
+    </script>
+</body>
+
+</html>

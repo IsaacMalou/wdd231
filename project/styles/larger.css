@@ -1,0 +1,154 @@
+/* =========================================================
+   Matrix Tech - Desktop Stylesheet (larger.css)
+   Target: Viewports 768px and wider (Tablets & Desktops)
+   ========================================================= */
+
+@media screen and (min-width: 768px) {
+
+    /* --- 1. Typography & Spacing Adjustments --- */
+    h2 {
+        font-size: 2.25rem;
+        margin-bottom: 2rem;
+    }
+
+    /* --- 2. Header & Desktop Navigation --- */
+    .header-container {
+        flex-wrap: nowrap;
+        padding: 1rem 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    /* Hide the mobile hamburger button entirely */
+    #menu-toggle {
+        display: none;
+    }
+
+    /* Force the navigation to show and switch to Flexbox */
+    #primary-nav {
+        display: block !important;
+        width: auto;
+        margin-top: 0;
+        margin-left: auto;
+        /* Pushes nav to the right */
+        order: 2;
+    }
+
+    .header-controls {
+        order: 3;
+        margin-left: 1.5rem;
+    }
+
+    .menu {
+        flex-direction: row;
+        /* Horizontal layout */
+        border-top: none;
+        gap: 2rem;
+    }
+
+    .menu li a {
+        border-bottom: none;
+        padding: 0.5rem 0;
+        font-size: 1rem;
+        position: relative;
+    }
+
+    /* Desktop Wayfinding */
+    .menu li a:hover,
+    .menu li a.active {
+        background-color: transparent;
+        color: var(--secondary-color);
+        padding-left: 0;
+    }
+
+    /* Elegant underline for active/hover state on desktop */
+    .menu li a.active::after,
+    .menu li a:hover::after {
+        content: '';
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background-color: var(--accent-color);
+        border-radius: 2px;
+        transition: var(--transition);
+    }
+
+    /* --- 3. Hero Section --- */
+    .hero {
+        padding: 6rem 2rem;
+    }
+
+    .hero-content h1 {
+        font-size: 3rem;
+        max-width: 800px;
+        margin: 0 auto 1.5rem auto;
+    }
+
+    .hero-content p {
+        font-size: 1.25rem;
+        max-width: 700px;
+    }
+
+    .hero-actions {
+        flex-direction: row;
+        /* Buttons side-by-side */
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    /* --- 4. Main Layouts: CSS Grid --- */
+    .features,
+    .dynamic-showcase {
+        margin-top: 4rem;
+    }
+
+    /* 3-Column layout for core features */
+    .feature-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    /* Auto-fitting, responsive grid for the 15 dynamic items */
+    .inventory-grid {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 2rem;
+    }
+
+    /* --- 5. Multi-Column Footer --- */
+    .site-footer {
+        padding-top: 4rem;
+    }
+
+    .footer-container {
+        /* Brand column gets more space than links/contact columns */
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 3rem;
+        padding-bottom: 2rem;
+    }
+
+    .footer-legal {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+    }
+
+    .mod-date {
+        margin-top: 0;
+    }
+}
+
+/* Extra media query for massive screens to constrain width */
+@media screen and (min-width: 1200px) {
+    main {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .hero {
+        border-radius: 12px;
+        margin-top: 2rem;
+    }
+}

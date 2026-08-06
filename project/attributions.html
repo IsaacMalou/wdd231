@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resource Attributions | Matrix Tech</title>
+    <meta name="description"
+        content="Attributions for images, fonts, and frameworks used in the Matrix Tech WDD 231 project.">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script type="module" src="scripts/utils.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="header-container">
+            <div class="logo-box">
+                <a href="index.html">
+                    <img src="images/matrix-logo.png" alt="Matrix Tech Logo" class="site-logo" width="80" height="80">
+                </a>
+                <div class="brand-text"><span class="brand-name">Matrix Tech</span></div>
+            </div>
+            <div class="header-controls">
+                <button id="theme-toggle" aria-label="Toggle Dark Mode" class="icon-btn">🌙</button>
+                <button id="menu-toggle" aria-label="Toggle Navigation" class="icon-btn">☰</button>
+            </div>
+            <nav id="primary-nav">
+                <ul class="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services & Tech</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" style="padding: 3rem 1.25rem;">
+            <div class="hero-content">
+                <h1>Resource Attributions</h1>
+                <p>References and credits for media, typography, and resources utilized on this site.</p>
+            </div>
+        </section>
+
+        <section class="features" style="max-width: 800px; margin: 3rem auto;">
+            <div
+                style="background-color: var(--bg-card); padding: 2.5rem; border-radius: 8px; border: 1px solid var(--border-color); box-shadow: var(--shadow);">
+                <h2 style="font-size: 1.5rem; margin-bottom: 1.5rem;">Design & Code Attributions</h2>
+
+                <ul
+                    style="display: flex; flex-direction: column; gap: 1.25rem; padding-left: 1.5rem; line-height: 1.6;">
+                    <li><strong>Google Fonts:</strong> Montserrat and Roboto typefaces provided via Google Fonts API.
+                    </li>
+                    <li><strong>Icons:</strong> Custom inline SVG code used for social media handles (WhatsApp,
+                        Facebook, YouTube, LinkedIn).</li>
+                    <li><strong>JavaScript Architecture:</strong> Custom modular vanilla ES6 scripts utilizing native
+                        `fetch()` and `URLSearchParams` for data handling.</li>
+                    <li><strong>Course Guidance:</strong> Built under the web frontend design specifications of Brigham
+                        Young University - Idaho (BYUI) WDD 231 curriculum.</li>
+                </ul>
+
+                <div style="margin-top: 2.5rem; text-align: center;">
+                    <a href="index.html" class="btn btn-primary"
+                        style="text-decoration: none; display: inline-block; padding: 0.75rem 1.5rem;">Return to
+                        Homepage</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-col brand-col">
+                <p class="footer-brand"><strong>Matrix Tech</strong></p>
+                <p class="footer-bio">Bridging the gap between creative visual identity and robust network engineering
+                    across South Sudan.</p>
+            </div>
+            <div class="footer-col links-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="attributions.html">Resource Attributions</a></li>
+                </ul>
+            </div>
+            <div class="footer-col contact-col">
+                <h3>Get In Touch</h3>
+                <p>📍 Juba, Central Equatoria, SSD</p>
+                <p>📞 +211 929 337 669</p>
+                <p>✉️ matrixtechssd@gmail.com</p>
+            </div>
+        </div>
+        <div class="footer-legal">
+            <p>&copy; <span id="currentyear"></span> Isaac Malou | Matrix Tech | WDD 231 Final Project</p>
+            <p id="lastModified" class="mod-date"></p>
+        </div>
+    </footer>
+</body>
+
+</html>

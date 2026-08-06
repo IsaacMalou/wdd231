@@ -1,0 +1,137 @@
+[
+    {
+        "id": "net-01",
+        "name": "Starlink Multi-Site Deployment",
+        "category": "Network Solutions",
+        "price": "Custom Quote",
+        "specs": "Starlink Mini & Standard, Multi-Site Config",
+        "description": "Installed, configured, and optimized Starlink Mini and Standard Kits for remote NGO field offices.",
+        "image": "images/starlink-deployment.jpg"
+    },
+    {
+        "id": "net-02",
+        "name": "Enterprise LAN/WAN Setup",
+        "category": "Network Solutions",
+        "price": "Custom Quote",
+        "specs": "Multi-story Layout, Managed Switches, Routing",
+        "description": "Designed and structured full corporate network layouts for multi-story office buildings in Juba.",
+        "image": "images/lan-setup.jpg"
+    },
+    {
+        "id": "net-03",
+        "name": "Bandwidth Optimization",
+        "category": "Network Solutions",
+        "price": "Custom Quote",
+        "specs": "Traffic Shaping, Load Balancing, MikroTik",
+        "description": "Implemented traffic-shaping and connectivity planning to ensure reliable internet speeds for corporate clients.",
+        "image": "images/bandwidth-opt.jpg"
+    },
+    {
+        "id": "net-04",
+        "name": "Wireless Grid Expansion",
+        "category": "Network Solutions",
+        "price": "Custom Quote",
+        "specs": "Multi-Zone APs, Seamless Roaming",
+        "description": "Deployed localized, multi-zone Wi-Fi access points tailored for schools and institutions.",
+        "image": "images/wifi-grid.jpg"
+    },
+    {
+        "id": "dev-01",
+        "name": "Hospital Management Portal",
+        "category": "Web Development",
+        "price": "Custom Quote",
+        "specs": "Patient Records, Scheduling, Secure Database",
+        "description": "Developed a secure web system for patient records and scheduling, aligning with healthcare tech needs.",
+        "image": "images/hospital-portal.jpg"
+    },
+    {
+        "id": "dev-02",
+        "name": "Hotel Booking & PMS System",
+        "category": "Web Development",
+        "price": "Custom Quote",
+        "specs": "Room Tracking, Web-based Check-in",
+        "description": "Built a custom web-based property management system to streamline check-ins and room tracking.",
+        "image": "images/hotel-pms.jpg"
+    },
+    {
+        "id": "dev-03",
+        "name": "Retail POS Software Integration",
+        "category": "Software Systems",
+        "price": "Custom Quote",
+        "specs": "Responsive Interface, Inventory Sync",
+        "description": "Configured and deployed responsive Point-of-Sale software systems for retail clients.",
+        "image": "images/retail-pos.jpg"
+    },
+    {
+        "id": "dev-04",
+        "name": "Suddgrid Service Landing Pages",
+        "category": "Web Development",
+        "price": "Custom Quote",
+        "specs": "High-Converting, Mobile-Responsive, SEO",
+        "description": "Designed high-converting, responsive service landing pages showcasing ICT capabilities.",
+        "image": "images/suddgrid-web.jpg"
+    },
+    {
+        "id": "dev-05",
+        "name": "NGO Data Collection Web App",
+        "category": "Web Development",
+        "price": "Custom Quote",
+        "specs": "Offline-to-Online Sync, Secure Portal",
+        "description": "Programmed a lightweight web portal optimizing secure offline-to-online data operations.",
+        "image": "images/ngo-data-app.jpg"
+    },
+    {
+        "id": "sec-01",
+        "name": "Centralized CCTV Network",
+        "category": "Security Systems",
+        "price": "Custom Quote",
+        "specs": "IP Cameras, NVR Storage, Remote View",
+        "description": "Managed full-scale CCTV camera installation linked to a secure, centralized storage framework.",
+        "image": "images/cctv-network.jpg"
+    },
+    {
+        "id": "sec-02",
+        "name": "Cybersecurity Framework Hardening",
+        "category": "Security Systems",
+        "price": "Custom Quote",
+        "specs": "Firewall Config, Data Protection Audits",
+        "description": "Conducted data protection audits and firewall configurations for enterprise data safety.",
+        "image": "images/cyber-security.jpg"
+    },
+    {
+        "id": "sec-03",
+        "name": "Enterprise Hardware Refresh",
+        "category": "Hardware Support",
+        "price": "Custom Quote",
+        "specs": "Workstation Upgrades, Diagnostics",
+        "description": "Upgraded, diagnosed, and deployed corporate workstations and hardware infrastructure.",
+        "image": "images/hardware-refresh.jpg"
+    },
+    {
+        "id": "dsn-01",
+        "name": "Corporate Tech Brand Identity",
+        "category": "Graphic Design",
+        "price": "Custom Quote",
+        "specs": "Vector Logos, Color Palettes, Brand Book",
+        "description": "Created cohesive brand guidelines, vector logos, and color palettes optimized for ICT companies.",
+        "image": "images/corporate-brand.jpg"
+    },
+    {
+        "id": "dsn-02",
+        "name": "UI/UX App System Dashboard",
+        "category": "Graphic Design",
+        "price": "Custom Quote",
+        "specs": "Wireframes, High-Fidelity UI, Clean Layouts",
+        "description": "Designed clean, intuitive high-fidelity user interface wireframes for software management portals.",
+        "image": "images/ui-ux-dash.jpg"
+    },
+    {
+        "id": "dsn-03",
+        "name": "Digital Marketing Asset Suite",
+        "category": "Graphic Design",
+        "price": "Custom Quote",
+        "specs": "Pitch Decks, Banners, Digital Graphics",
+        "description": "Crafted professional pitch decks, banners, and digital graphics highlighting technology infrastructure.",
+        "image": "images/marketing-assets.jpg"
+    }
+]
