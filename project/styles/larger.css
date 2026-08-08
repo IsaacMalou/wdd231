@@ -57,7 +57,7 @@
     .menu li a:hover,
     .menu li a.active {
         background-color: transparent;
-        color: var(--secondary-color);
+        color: var(--secondary-color) !important;
         padding-left: 0;
     }
 
@@ -104,16 +104,22 @@
         margin-top: 4rem;
     }
 
-    /* 3-Column layout for core features */
+    /* Auto-fitting grid to beautifully handle the 4 service pillars (2x2) */
     .feature-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 2rem;
     }
 
-    /* Auto-fitting, responsive grid for the 15 dynamic items */
+    /* Auto-fitting, responsive grid for the dynamic items */
     .inventory-grid {
         grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
         gap: 2rem;
+    }
+
+    /* Expansive padding for the Call to Action section on desktop */
+    .cta-section {
+        padding: 5rem 3rem;
+        margin: 6rem auto 3rem auto;
     }
 
     /* --- 5. Multi-Column Footer --- */
@@ -138,7 +144,25 @@
     .mod-date {
         margin-top: 0;
     }
+
+    /* --- 6. Contact Page Desktop Grid --- */
+    .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: start;
+        /* Prevents cards from stretching unevenly */
+    }
+
+    .contact-info-box,
+    .form-box {
+        padding: 2.5rem;
+        /* Spacious padding for desktop */
+    }
+
 }
+
+/* End of 768px Media Query */
 
 /* Extra media query for massive screens to constrain width */
 @media screen and (min-width: 1200px) {

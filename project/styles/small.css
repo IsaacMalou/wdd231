@@ -7,7 +7,7 @@
 :root {
     --primary-color: #0F172A;
     /* Deep Navy Blue */
-    --secondary-color: #17597b;
+    --secondary-color: #17597B;
     /* Cyan Tech Blue */
     --accent-color: #E11D48;
     /* Matrix Crimson */
@@ -21,7 +21,7 @@
     /* Crisp Border Gray */
     --font-heading: 'Montserrat', sans-serif;
     --font-body: 'Roboto', sans-serif;
-    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.07);
+    --shadow: 0 4px 6px -1px #00000012;
     --transition: all 0.3s ease;
 }
 
@@ -88,7 +88,7 @@ a:hover {
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 10px #00000026;
 }
 
 .header-container {
@@ -131,7 +131,7 @@ a:hover {
 
 .icon-btn {
     background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid #FFFFFF33;
     color: #FFFFFF;
     font-size: 1.25rem;
     padding: 0.4rem 0.6rem;
@@ -160,24 +160,23 @@ a:hover {
     list-style: none;
     display: flex;
     flex-direction: column;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid #FFFFFF1A;
 }
 
 .menu li a {
     display: block;
     padding: 0.75rem 1rem;
-    color: #F8FAFC;
+    color: #F8FAFC !important;
     font-family: var(--font-heading);
     font-weight: 600;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid #FFFFFF0D;
 }
 
 .menu li a:hover,
 .menu li a.active {
     background-color: var(--secondary-color);
-    color: #FFFFFF;
+    color: #FFFFFF !important;
     padding-left: 1.5rem;
-    /* Wayfinding visual queue */
 }
 
 /* --- 4. Main Content & Layout Sections --- */
@@ -187,7 +186,8 @@ main {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, #0F172A 0%, #0284C7 100%);
+    background-color: #0F172A;
+    background-image: linear-gradient(135deg, #0F172A 0%, #0284C7 100%);
     color: #FFFFFF;
     padding: 3.5rem 1.25rem;
     text-align: center;
@@ -214,8 +214,9 @@ main {
     gap: 0.75rem;
 }
 
-/* Buttons */
-.btn {
+/* Shared Button Styles */
+.action-link,
+.cta-btn {
     display: inline-block;
     padding: 0.85rem 1.5rem;
     border-radius: 6px;
@@ -227,24 +228,24 @@ main {
     transition: var(--transition);
 }
 
-.btn-primary {
+.primary-link {
     background-color: var(--accent-color);
-    color: #FFFFFF;
+    color: #FFFFFF !important;
 }
 
-.btn-primary:hover {
+.primary-link:hover {
     background-color: #BE123C;
-    color: #FFFFFF;
+    color: #FFFFFF !important;
 }
 
-.btn-secondary {
+.secondary-link {
     background-color: #FFFFFF;
-    color: var(--primary-color);
+    color: var(--primary-color) !important;
 }
 
-.btn-secondary:hover {
+.secondary-link:hover {
     background-color: var(--bg-light);
-    color: var(--secondary-color);
+    color: var(--secondary-color) !important;
 }
 
 /* Feature & Inventory Showcase Sections */
@@ -276,10 +277,29 @@ main {
 .feature-card:hover,
 .inventory-card:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 15px #0000001A;
 }
 
-/* Dynamic Card Content Styles */
+/* --- Global Badges (Services & Inventory) --- */
+.badge {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: #FFFFFF;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+/* Specific override for inventory card badges */
+.inventory-card .badge {
+    background-color: var(--accent-color);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
 .inventory-card img {
     width: 100%;
     height: 180px;
@@ -288,23 +308,54 @@ main {
     margin-bottom: 1rem;
 }
 
-.inventory-card .badge {
-    display: inline-block;
-    background-color: var(--accent-color);
-    color: #FFFFFF;
-    font-size: 0.75rem;
-    font-weight: 700;
-    padding: 0.2rem 0.5rem;
-    border-radius: 4px;
-    text-transform: uppercase;
-    margin-bottom: 0.5rem;
-}
-
 .inventory-card .price {
     font-size: 1.2rem;
     font-weight: 700;
     color: var(--secondary-color);
     margin: 0.5rem 0;
+}
+
+/* --- Services Specific Styles --- */
+.service-list {
+    margin-top: 1rem;
+    padding-left: 1.2rem;
+    color: var(--text-dark);
+}
+
+.service-list li {
+    margin-bottom: 0.5rem;
+}
+
+/* Call to Action Section */
+.cta-section {
+    text-align: center;
+    margin: 4rem 1.25rem 2rem 1.25rem;
+    background-color: var(--bg-card);
+    padding: 3rem 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow);
+    max-width: 1200px;
+}
+
+.cta-section h2 {
+    border-left: none;
+    padding-left: 0;
+    margin-bottom: 1rem;
+}
+
+.cta-text {
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+}
+
+.cta-btn {
+    background-color: var(--secondary-color);
+    color: #FFFFFF !important;
+}
+
+.cta-btn:hover {
+    background-color: var(--primary-color);
 }
 
 /* --- 5. Professional Footer --- */
@@ -375,7 +426,7 @@ main {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: #FFFFFF0D;
     transition: var(--transition);
 }
 
@@ -390,10 +441,10 @@ main {
     max-width: 1200px;
     margin: 2rem auto 0 auto;
     padding-top: 1.5rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid #FFFFFF1A;
     text-align: center;
     font-size: 0.85rem;
-    color: #64748B;
+    color: #94A3B8;
 }
 
 .mod-date {
@@ -409,13 +460,13 @@ main {
     max-width: 500px;
     width: 90%;
     margin: auto;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 25px #0000004D;
     background-color: var(--bg-card);
     color: var(--text-dark);
 }
 
 .custom-modal::backdrop {
-    background: rgba(15, 23, 42, 0.7);
+    background-color: #0F172AB3;
     backdrop-filter: blur(3px);
 }
 
@@ -440,4 +491,128 @@ main {
 
 #close-modal:hover {
     background-color: var(--border-color);
+}
+
+/* --- 7. Attributions Page Styles --- */
+.attributions-hero {
+    padding: 3rem 1.25rem;
+}
+
+.attributions-section {
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 0 1.25rem;
+}
+
+.attributions-card {
+    background-color: var(--bg-card);
+    padding: 2.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow);
+}
+
+.attributions-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.attributions-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    padding-left: 1.5rem;
+    line-height: 1.6;
+}
+
+.attributions-action {
+    margin-top: 2.5rem;
+    text-align: center;
+}
+
+/* --- 8. Contact Page Styles --- */
+.contact-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contact-info-box,
+.form-box {
+    background-color: var(--bg-card);
+    padding: 2rem 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow);
+}
+
+/* Contact Details Styling */
+.contact-detail {
+    margin-bottom: 1.5rem;
+}
+
+.detail-title {
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.25rem;
+}
+
+.contact-link {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contact-link:hover {
+    color: var(--accent-color);
+}
+
+/* Form Layout & Inputs */
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.85rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    font-family: inherit;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.2);
+}
+
+/* Submit Button */
+.submit-btn {
+    width: 100%;
+    background-color: var(--accent-color);
+    color: #FFFFFF;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1.1rem;
+    font-family: var(--font-heading);
+    border: none;
+    padding: 1rem;
+    border-radius: 6px;
+    transition: var(--transition);
+    margin-top: 1rem;
+}
+
+.submit-btn:hover {
+    background-color: #BE123C;
 }

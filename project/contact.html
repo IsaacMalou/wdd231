@@ -14,8 +14,9 @@
     <!-- Open Graph -->
     <meta property="og:title" content="Contact Matrix Tech">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="images/matrix-logo.png">
-    <meta property="og:url" content="https://isaaxmatrix.github.io/wdd231/project/contact.html">
+    <!-- Using absolute URL for og:image -->
+    <meta property="og:image" content="https://isaacmalou.github.io/wdd231/project/images/matrix-logo.png">
+    <meta property="og:url" content="https://isaacmalou.github.io/wdd231/project/contact.html">
     <meta property="og:description" content="Reach out for custom IT infrastructure quotes and digital solutions.">
 
     <!-- Branding -->
@@ -33,7 +34,7 @@
     <link rel="stylesheet" href="styles/larger.css">
 
     <!-- Interactive Scripts -->
-    <script type="module" src="scripts/utils.js" defer></script>
+    <script type="module" src="scripts/utils.js"></script>
 </head>
 
 <body>
@@ -65,7 +66,7 @@
 
     <main>
         <!-- Contact Header -->
-        <section class="hero" style="padding: 3rem 1.25rem;">
+        <section class="hero contact-hero">
             <div class="hero-content">
                 <h1>Get In Touch With Us</h1>
                 <p>Have a project in mind or need robust internet and software solutions? Reach out to our team in Juba
@@ -74,78 +75,64 @@
         </section>
 
         <!-- Contact Layout Grid -->
-        <section class="features" style="max-width: 1000px; margin: 3rem auto;">
-            <div class="contact-grid"
-                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; align-items: start;">
+        <section class="features contact-section">
+            <div class="contact-grid">
 
                 <!-- Contact Details Column -->
-                <div class="contact-info-box"
-                    style="background-color: var(--bg-card); padding: 2.5rem; border-radius: 8px; border: 1px solid var(--border-color); box-shadow: var(--shadow);">
-                    <h2 style="font-size: 1.75rem; margin-bottom: 1.5rem;">Contact Information</h2>
+                <div class="contact-info-box">
+                    <h2>Contact Information</h2>
 
-                    <div style="margin-bottom: 1.5rem;">
-                        <p style="font-weight: 700; color: var(--secondary-color); margin-bottom: 0.25rem;">📍 Location
-                        </p>
+                    <div class="contact-detail">
+                        <p class="detail-title">📍 Location</p>
                         <p>Juba, Central Equatoria State, South Sudan</p>
                     </div>
 
-                    <div style="margin-bottom: 1.5rem;">
-                        <p style="font-weight: 700; color: var(--secondary-color); margin-bottom: 0.25rem;">📞 Direct
-                            Phone / WhatsApp</p>
+                    <div class="contact-detail">
+                        <p class="detail-title">📞 Direct Phone / WhatsApp</p>
                         <p><a href="https://wa.me/211929337669" target="_blank" rel="noopener noreferrer"
-                                style="color: var(--text-dark); text-decoration: none;">+211 929 337 669</a></p>
+                                class="contact-link">+211 929 337 669</a></p>
                     </div>
 
-                    <div style="margin-bottom: 1.5rem;">
-                        <p style="font-weight: 700; color: var(--secondary-color); margin-bottom: 0.25rem;">✉️ Email
-                            Address</p>
-                        <p><a href="mailto:matrixtechssd@gmail.com"
-                                style="color: var(--text-dark); text-decoration: none;">matrixtechssd@gmail.com</a></p>
+                    <div class="contact-detail">
+                        <p class="detail-title">✉️ Email Address</p>
+                        <p><a href="mailto:matrixtechssd@gmail.com" class="contact-link">matrixtechssd@gmail.com</a></p>
                     </div>
 
-                    <div>
-                        <p style="font-weight: 700; color: var(--secondary-color); margin-bottom: 0.25rem;">⏰ Business
-                            Hours</p>
+                    <div class="contact-detail">
+                        <p class="detail-title">⏰ Business Hours</p>
                         <p>Monday – Saturday: 8:00 AM – 6:00 PM</p>
                     </div>
                 </div>
 
                 <!-- HTML Form Column (Submits to thankyou.html) -->
-                <div class="form-box"
-                    style="background-color: var(--bg-card); padding: 2.5rem; border-radius: 8px; border: 1px solid var(--border-color); box-shadow: var(--shadow);">
-                    <h2 style="font-size: 1.75rem; margin-bottom: 1.5rem;">Send Us a Message</h2>
+                <div class="form-box">
+                    <h2>Send Us a Message</h2>
 
                     <form action="thankyou.html" method="get">
                         <!-- Full Name -->
-                        <div style="margin-bottom: 1.25rem;">
-                            <label for="fullname" style="display: block; font-weight: 500; margin-bottom: 0.5rem;">Full
-                                Name *</label>
+                        <div class="form-group">
+                            <label for="fullname" class="form-label">Full Name *</label>
                             <input type="text" id="fullname" name="fullname" required placeholder="Enter your full name"
-                                style="width: 100%; padding: 0.75rem; border: 1px solid var(--border-color); border-radius: 4px; background-color: var(--bg-main); color: var(--text-dark);">
+                                class="form-input">
                         </div>
 
                         <!-- Email -->
-                        <div style="margin-bottom: 1.25rem;">
-                            <label for="email" style="display: block; font-weight: 500; margin-bottom: 0.5rem;">Email
-                                Address *</label>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email Address *</label>
                             <input type="email" id="email" name="email" required placeholder="name@example.com"
-                                style="width: 100%; padding: 0.75rem; border: 1px solid var(--border-color); border-radius: 4px; background-color: var(--bg-main); color: var(--text-dark);">
+                                class="form-input">
                         </div>
 
                         <!-- Phone -->
-                        <div style="margin-bottom: 1.25rem;">
-                            <label for="phone" style="display: block; font-weight: 500; margin-bottom: 0.5rem;">Phone
-                                Number</label>
-                            <input type="tel" id="phone" name="phone" placeholder="+211 ..."
-                                style="width: 100%; padding: 0.75rem; border: 1px solid var(--border-color); border-radius: 4px; background-color: var(--bg-main); color: var(--text-dark);">
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+211 ..." class="form-input">
                         </div>
 
                         <!-- Service Category Select Dropdown -->
-                        <div style="margin-bottom: 1.25rem;">
-                            <label for="service"
-                                style="display: block; font-weight: 500; margin-bottom: 0.5rem;">Service Needed</label>
-                            <select id="service" name="service"
-                                style="width: 100%; padding: 0.75rem; border: 1px solid var(--border-color); border-radius: 4px; background-color: var(--bg-main); color: var(--text-dark);">
+                        <div class="form-group">
+                            <label for="service" class="form-label">Service Needed</label>
+                            <select id="service" name="service" class="form-input">
                                 <option value="Networks & Starlink">Network Solutions & Starlink</option>
                                 <option value="Software & Web Dev">Software Systems & Web Dev</option>
                                 <option value="Security & Hardware">Security Systems & Hardware</option>
@@ -155,18 +142,14 @@
                         </div>
 
                         <!-- Message Textarea -->
-                        <div style="margin-bottom: 1.5rem;">
-                            <label for="message" style="display: block; font-weight: 500; margin-bottom: 0.5rem;">Your
-                                Message *</label>
+                        <div class="form-group">
+                            <label for="message" class="form-label">Your Message *</label>
                             <textarea id="message" name="message" rows="4" required
-                                placeholder="Describe your project requirements..."
-                                style="width: 100%; padding: 0.75rem; border: 1px solid var(--border-color); border-radius: 4px; background-color: var(--bg-main); color: var(--text-dark); resize: vertical;"></textarea>
+                                placeholder="Describe your project requirements..." class="form-input"></textarea>
                         </div>
 
                         <!-- Submit Button -->
-                        <button type="submit" class="btn btn-primary"
-                            style="width: 100%; border: none; cursor: pointer; padding: 0.75rem; font-weight: bold; border-radius: 4px;">Submit
-                            Request</button>
+                        <button type="submit" class="submit-btn">Submit Request</button>
                     </form>
                 </div>
 

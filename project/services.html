@@ -14,8 +14,9 @@
     <!-- Open Graph for Social Sharing -->
     <meta property="og:title" content="Matrix Tech Services & Solutions">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="images/matrix-logo.png">
-    <meta property="og:url" content="https://isaaxmatrix.github.io/wdd231/project/services.html">
+    <!-- Using absolute URL for og:image -->
+    <meta property="og:image" content="https://isaacmalou.github.io/wdd231/project/images/matrix-logo.png">
+    <meta property="og:url" content="https://isaacmalou.github.io/wdd231/project/services.html">
     <meta property="og:description"
         content="Comprehensive digital design and robust networking solutions tailored for your business.">
 
@@ -34,7 +35,7 @@
     <link rel="stylesheet" href="styles/larger.css">
 
     <!-- Interactive Scripts -->
-    <script type="module" src="scripts/utils.js" defer></script>
+    <script type="module" src="scripts/utils.js"></script>
 </head>
 
 <body>
@@ -68,20 +69,19 @@
     <main>
         <!-- Detailed Services Section -->
         <section class="features">
-            <h2>Comprehensive Service Pillars</h2>
+    
+            <h1>Comprehensive Service Pillars</h1>
 
-            <!-- Added inline CSS for a perfect 2x2 grid on desktop -->
-            <div class="feature-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+            <div class="feature-grid">
 
                 <!-- Pillar 1 -->
                 <article class="feature-card">
-                    <span class="badge"
-                        style="background-color: var(--secondary-color); color: white; padding: 0.3rem 0.6rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold; margin-bottom: 1rem; display: inline-block;">01.
-                        Networks & Starlink</span>
+                    <span class="badge">01. Networks & Starlink</span>
                     <h3>Network Solutions & Integration</h3>
-                    <p>High-speed, reliable internet infrastructure deployed anywhere. We handle technical deployments so you
+                    <p>High-speed, reliable internet infrastructure deployed anywhere. We handle technical deployments
+                        so you
                         can focus on operations.</p>
-                    <ul style="margin-top: 1rem; padding-left: 1.2rem; color: var(--text-dark);">
+                    <ul class="service-list">
                         <li>Starlink Multi-Site Deployment</li>
                         <li>Enterprise LAN/WAN Setup</li>
                         <li>Bandwidth Optimization & Traffic Shaping</li>
@@ -91,13 +91,12 @@
 
                 <!-- Pillar 2 -->
                 <article class="feature-card">
-                    <span class="badge"
-                        style="background-color: var(--secondary-color); color: white; padding: 0.3rem 0.6rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold; margin-bottom: 1rem; display: inline-block;">02.
-                        Web & Software</span>
+                    <span class="badge">02. Web & Software</span>
                     <h3>Software Systems & Web Dev</h3>
-                    <p>Custom digital solutions designed to streamline workflows, manage data securely, and establish a powerful
+                    <p>Custom digital solutions designed to streamline workflows, manage data securely, and establish a
+                        powerful
                         online presence.</p>
-                    <ul style="margin-top: 1rem; padding-left: 1.2rem; color: var(--text-dark);">
+                    <ul class="service-list">
                         <li>Hospital & Clinic Management Portals</li>
                         <li>Hotel Booking & PMS Systems</li>
                         <li>NGO Data Collection Web Apps</li>
@@ -107,13 +106,12 @@
 
                 <!-- Pillar 3 -->
                 <article class="feature-card">
-                    <span class="badge"
-                        style="background-color: var(--secondary-color); color: white; padding: 0.3rem 0.6rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold; margin-bottom: 1rem; display: inline-block;">03.
-                        Security & Hardware</span>
+                    <span class="badge">03. Security & Hardware</span>
                     <h3>Security Systems & Hardware</h3>
-                    <p>Protecting your physical assets and digital data with robust surveillance and enterprise-grade hardware
+                    <p>Protecting your physical assets and digital data with robust surveillance and enterprise-grade
+                        hardware
                         support.</p>
-                    <ul style="margin-top: 1rem; padding-left: 1.2rem; color: var(--text-dark);">
+                    <ul class="service-list">
                         <li>Centralized CCTV Networks</li>
                         <li>Cybersecurity Framework Hardening</li>
                         <li>Enterprise Hardware Refresh & Upgrades</li>
@@ -123,13 +121,12 @@
 
                 <!-- Pillar 4 -->
                 <article class="feature-card">
-                    <span class="badge"
-                        style="background-color: var(--secondary-color); color: white; padding: 0.3rem 0.6rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold; margin-bottom: 1rem; display: inline-block;">04.
-                        Creative Studio</span>
+                    <span class="badge">04. Creative Studio</span>
                     <h3>Graphic Design & Branding</h3>
-                    <p>Your brand is your business's visual handshake. We build distinct, memorable identities optimized for ICT
+                    <p>Your brand is your business's visual handshake. We build distinct, memorable identities optimized
+                        for ICT
                         and corporate spaces.</p>
-                    <ul style="margin-top: 1rem; padding-left: 1.2rem; color: var(--text-dark);">
+                    <ul class="service-list">
                         <li>Corporate Tech Brand Identity</li>
                         <li>UI/UX App System Dashboards</li>
                         <li>Digital Marketing Asset Suites</li>
@@ -141,12 +138,11 @@
         </section>
 
         <!-- Call To Action -->
-        <section class="features"
-            style="text-align: center; margin-top: 4rem; margin-bottom: 2rem; background-color: var(--bg-card); padding: 3rem; border-radius: 8px; border: 1px solid var(--border-color); box-shadow: var(--shadow);">
+        <section class="cta-section">
             <h2>Ready to Upgrade Your Tech & Brand?</h2>
-            <p style="max-width: 600px; margin: 0 auto 2rem auto;">Whether you need a full corporate rebrand or a
+            <p class="cta-text">Whether you need a full corporate rebrand or a
                 reliable internet infrastructure deployed to a remote field office, Matrix Tech is ready to deliver.</p>
-            <a href="contact.html" class="btn btn-primary">Get a Custom Quote</a>
+            <a href="contact.html" class="cta-btn">Get a Custom Quote</a>
         </section>
     </main>
 

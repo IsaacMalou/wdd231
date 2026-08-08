@@ -4,20 +4,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resource Attributions | Matrix Tech</title>
+
+    <!-- SEO & Page Requirements -->
+    <title>Resource Attributions | Matrix Tech Project</title>
     <meta name="description"
-        content="Attributions for images, fonts, and frameworks used in the Matrix Tech WDD 231 project.">
+        content="Attributions and credits for images, typography, icons, and frameworks used in the Matrix Tech WDD 231 web project.">
+    <meta name="author" content="Isaac Malou">
+
+    <!-- Open Graph for Social Sharing -->
+    <meta property="og:title" content="Resource Attributions | Matrix Tech Project">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://isaacmalou.github.io/wdd231/project/images/matrix-logo.png">
+    <meta property="og:url" content="https://isaacmalou.github.io/wdd231/project/attributions.html">
+    <meta property="og:description"
+        content="Attributions and credits for images, typography, icons, and frameworks used in the Matrix Tech WDD 231 web project.">
+
+    <!-- Branding -->
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;500;700&display=swap"
         rel="stylesheet">
 
+    <!-- Core Stylesheets -->
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
-    <script type="module" src="scripts/utils.js" defer></script>
+
+    <!-- Module Script -->
+    <script type="module" src="scripts/utils.js"></script>
 </head>
 
 <body>
@@ -44,20 +61,18 @@
     </header>
 
     <main>
-        <section class="hero" style="padding: 3rem 1.25rem;">
+        <section class="hero attributions-hero">
             <div class="hero-content">
                 <h1>Resource Attributions</h1>
                 <p>References and credits for media, typography, and resources utilized on this site.</p>
             </div>
         </section>
 
-        <section class="features" style="max-width: 800px; margin: 3rem auto;">
-            <div
-                style="background-color: var(--bg-card); padding: 2.5rem; border-radius: 8px; border: 1px solid var(--border-color); box-shadow: var(--shadow);">
-                <h2 style="font-size: 1.5rem; margin-bottom: 1.5rem;">Design & Code Attributions</h2>
+        <section class="attributions-section">
+            <div class="attributions-card">
+                <h2>Design & Code Attributions</h2>
 
-                <ul
-                    style="display: flex; flex-direction: column; gap: 1.25rem; padding-left: 1.5rem; line-height: 1.6;">
+                <ul class="attributions-list">
                     <li><strong>Google Fonts:</strong> Montserrat and Roboto typefaces provided via Google Fonts API.
                     </li>
                     <li><strong>Icons:</strong> Custom inline SVG code used for social media handles (WhatsApp,
@@ -68,10 +83,8 @@
                         Young University - Idaho (BYUI) WDD 231 curriculum.</li>
                 </ul>
 
-                <div style="margin-top: 2.5rem; text-align: center;">
-                    <a href="index.html" class="btn btn-primary"
-                        style="text-decoration: none; display: inline-block; padding: 0.75rem 1.5rem;">Return to
-                        Homepage</a>
+                <div class="attributions-action">
+                    <a href="index.html" class="action-link primary-link">Return to Homepage</a>
                 </div>
             </div>
         </section>
